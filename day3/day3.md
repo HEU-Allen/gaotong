@@ -51,13 +51,14 @@
 - 对比维度：推理延迟（ms）、吞吐量（FPS）、能效比（FPS/W）。
 - 数据汇总（实测 + 计划书预期）：
 
-| 平台 | 延迟 | FPS | 能效比 |
-|------|------|-----|--------|
-| Mac CPU（FP32） | 50 ms | 20.0 | 1.0 |
-| Colab CPU（FP32） | 154 ms | 6.5 | 0.3 |
-| Colab GPU（FP32） | 12 ms | 83.2 | 8.3 |
-| Jetson Orin（FP16，预期） | 8 ms | 125 | 12.5 |
-| RK3588 NPU（INT8，预期） | 5 ms | 200 | 20.0 |
+| 平台                | 延迟     | FPS  | 能效比  | 备注        |
+| ----------------- | ------ | ---- | ---- | --------- |
+| Mac CPU（FP32）     | 50 ms  | 20.0 | 1.0  | 实测        |
+| Colab CPU（FP32）   | 154 ms | 6.5  | 0.3  | 实测        |
+| Colab GPU（FP32）   | 12 ms  | 83.2 | 8.3  | 实测        |
+| Jetson Orin（FP16） | 8 ms   | 125  | 12.5 | **计划书预期** |
+| RK3588 NPU（INT8）  | 5 ms   | 200  | 20.0 | **计划书预期** |
+
 <img width="1470" height="500" alt="Figure_2" src="https://github.com/user-attachments/assets/560abd83-a879-4450-9457-3e17f4b4cf72" />
 
 - **结论**：不同硬件平台需匹配最优推理后端——TensorRT 用于 NVIDIA 生态，RKNN 用于 Rockchip NPU，CoreML 用于 Apple Silicon。RK3588 NPU 在 INT8 量化下能效比最高，适合边缘低功耗部署。
