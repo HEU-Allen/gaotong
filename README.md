@@ -1,2 +1,2 @@
 # gaotong
-ARM SoC 架构学习笔记
+实习笔记
