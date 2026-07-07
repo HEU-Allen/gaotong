@@ -16,11 +16,13 @@
 **2. Colab GPU 实践**
 - 环境：Google Colab（Tesla T4，CUDA 13.0）。
 - 测试方法：基于 PyTorch YOLOv10-N FP32 推理，对比 CPU 与 GPU 后端性能。
-
+测试结果如下：
+<img width="942" height="330" alt="3ef50a7063de61682d9e0a0d5397bdb9" src="https://github.com/user-attachments/assets/03c45cac-0586-4920-b0b1-ccdfbfa303b5" />
 | 后端 | 延迟 | FPS | 加速比 |
 |------|------|-----|--------|
 | CPU（Colab） | 154.20 ms | 6.5 | 1x |
 | GPU（Tesla T4） | 12.02 ms | 83.2 | **12.82x** |
+
 
 - **结果分析**：GPU 相比 CPU 实现 **12.8 倍**加速。若进一步使用 TensorRT FP16/INT8 优化，预期可压缩至 **8 ms/125 FPS**（FP16）或 **5 ms/200 FPS**（INT8），接近 Jetson Orin NX 与 RK3588 NPU 的理论性能。
 
@@ -41,7 +43,7 @@
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|
 | RKNN Toolkit2 安装失败 | Colab 默认 Python 3.12 与 RKNN Toolkit2 2.3.0 存在兼容性冲突 | 使用 Miniconda 创建 Python 3.9 独立环境，隔离依赖后成功安装 |
-| 模拟器无法运行 | RKNN Toolkit2 2.3.0 的 `init_runtime(target='simulator')` 已移除平台配置支持 | 记录该限制；待进入实习单位后，直接在 RK3588 真机上部署 `.rknn` 文件验证 |
+| 模拟器无法运行 | RKNN Toolkit2 2.3.0 的 `init_runtime(target='simulator')` 已移除平台配置支持 | 记录该限制；这是可以直接在 RK3588 真机上部署 `.rknn` 文件验证 |
 
 **3. 多平台性能对比可视化**
 - 在 Mac 本地运行 `platform_compare.py`，生成 `platform_benchmark.png`。
@@ -55,7 +57,7 @@
 | Colab GPU（FP32） | 12 ms | 83.2 | 8.3 |
 | Jetson Orin（FP16，预期） | 8 ms | 125 | 12.5 |
 | RK3588 NPU（INT8，预期） | 5 ms | 200 | 20.0 |
-
+<img width="942" height="330" alt="3ef50a7063de61682d9e0a0d5397bdb9" src="https://github.com/user-attachments/assets/03c45cac-0586-4920-b0b1-ccdfbfa303b5" />
 - **结论**：不同硬件平台需匹配最优推理后端——TensorRT 用于 NVIDIA 生态，RKNN 用于 Rockchip NPU，CoreML 用于 Apple Silicon。RK3588 NPU 在 INT8 量化下能效比最高，适合边缘低功耗部署。
 
 ---
@@ -77,7 +79,7 @@
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|
 | `platform_compare.py` 中文乱码 | Matplotlib 默认无中文字体，Mac 系统中文渲染失败 | 在代码开头配置 `plt.rcParams['font.sans-serif'] = ['PingFang SC', 'Heiti SC']` 并关闭 Unicode 负号 |
-| RKNN 模拟器不可用 | RKNN Toolkit2 2.3.0 移除 simulator 平台配置 | 改用真机部署验证；实习单位有 RK3588 板子后直接烧录测试 |
+| RKNN 模拟器不可用 | RKNN Toolkit2 2.3.0 移除 simulator 平台配置 | 改用真机部署验证；可以用 RK3588 板子直接烧录测试 |
 | Colab Python 3.12 冲突 | RKNN 官方 wheel 未适配 Python 3.12 | Miniconda 创建 Python 3.9 环境，完全隔离依赖 |
 
 ---
@@ -93,7 +95,4 @@
 
 ---
 
-### 七、明日计划
-- **Day 4**：多线程视频处理与检测系统（Mac 本地）。
-  - 上午：生产者-消费者模式异步视频捕获 + 帧丢弃策略 + 端到端延迟分析。
-  - 下午：YOLOv10 检测器集成（Letterbox 预处理 + 坐标映射 + 完整检测流水线）。
+
