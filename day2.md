@@ -11,8 +11,9 @@
 
 **2. 跨平台推理测试**
 - **Mac 本地测试**：ONNX Runtime CPUExecutionProvider 未实现 ConvInteger 算子，INT8 模型无法加载，测试失败。
+<img width="1126" height="788" alt="image" src="https://github.com/user-attachments/assets/01bf2ba9-cbc6-4061-aa6e-16265ad02e3c" />
 - **Google Colab（Linux CPU）测试**：INT8 模型可正常运行，测试结果如下：
-
+<img width="752" height="288" alt="image" src="https://github.com/user-attachments/assets/3807097e-49fb-43e1-aade-e84117521e8a" />
 | 指标 | FP32 | INT8 | 变化 |
 |------|------|------|------|
 | 模型大小 | 9.50 MB | 2.71 MB | 压缩 3.5x |
@@ -33,6 +34,8 @@
 - 加载教师模型 YOLOv10-S（22.2M 参数）与学生模型 YOLOv10-N（2.3M 参数）。
 - 蒸馏损失函数：L = α·L_task + (1-α)·T²·KL(σ(z_s/T) || σ(z_t/T))，其中温度 T=4，α=0.5。
 - 在随机输入下验证损失计算框架正确性，输出硬损失、软损失与总损失。
+- 运行结果如下：
+<img width="760" height="542" alt="image" src="https://github.com/user-attachments/assets/984d6498-f6cb-464a-b855-007ee008b7c9" />
 - 损失值偏大的原因说明：
   - 输入为随机噪声（`torch.randn`），非真实图片。
   - 输出包含边界框坐标（xywh，数值范围 0-640）、置信度、类别概率，量纲不统一。
@@ -46,7 +49,7 @@
 - 遇到的问题与解决：YOLOv10 的卷积层封装在自定义模块（C2f、Conv 等）中，直接遍历 `named_modules()` 无法正确匹配 Conv2d，改用 `modules()` 递归遍历所有子模块解决。
 - 统计验证：通过 `module.weight`（property）读取应用 mask 后的参数，而非 `p.data`，正确统计非零参数。
 - 剪枝结果：
-
+<img width="570" height="361" alt="image" src="https://github.com/user-attachments/assets/b8ff2fc1-ef5b-4128-b3d3-1be47ca0f085" />
 | 指标 | 数值 |
 |------|------|
 | 原始参数量 | 2,775,520 (2.78M) |
