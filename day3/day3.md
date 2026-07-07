@@ -18,6 +18,7 @@
 - 测试方法：基于 PyTorch YOLOv10-N FP32 推理，对比 CPU 与 GPU 后端性能。
 测试结果如下：
 <img width="942" height="330" alt="3ef50a7063de61682d9e0a0d5397bdb9" src="https://github.com/user-attachments/assets/03c45cac-0586-4920-b0b1-ccdfbfa303b5" />
+
 | 后端 | 延迟 | FPS | 加速比 |
 |------|------|-----|--------|
 | CPU（Colab） | 154.20 ms | 6.5 | 1x |
@@ -58,6 +59,7 @@
 | Jetson Orin（FP16，预期） | 8 ms | 125 | 12.5 |
 | RK3588 NPU（INT8，预期） | 5 ms | 200 | 20.0 |
 <img width="942" height="330" alt="3ef50a7063de61682d9e0a0d5397bdb9" src="https://github.com/user-attachments/assets/03c45cac-0586-4920-b0b1-ccdfbfa303b5" />
+
 - **结论**：不同硬件平台需匹配最优推理后端——TensorRT 用于 NVIDIA 生态，RKNN 用于 Rockchip NPU，CoreML 用于 Apple Silicon。RK3588 NPU 在 INT8 量化下能效比最高，适合边缘低功耗部署。
 
 ---
