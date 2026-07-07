@@ -28,7 +28,7 @@
   - `nump` 拼写错误，修正为 `numpy`。
   - `onnxslm` 拼写错误，修正为 `onnxsim`。
   - `onnxruntime-tools` 在 Python 3.9 下存在依赖冲突，跳过安装（YOLOv10 推理不需要）。
-
+<img width="1128" height="742" alt="5b52a0d6b8e50dbcfb5d5af9a9308338" src="https://github.com/user-attachments/assets/2868dea6-2f64-4bf3-a5b7-9f5aa3818796" />
 **2. YOLOv10-N ONNX 导出**
 - 使用 Ultralytics 框架加载预训练权重 `yolov10n.pt`，导出为 ONNX 格式。
 - 导出参数说明：
@@ -41,6 +41,7 @@
 **3. ONNX Runtime 基准测试**
 - 测试环境：MacBook（Apple Silicon），CPU 推理。
 - 测试方法：预热 10 次后，正式计时 100 次，计算平均延迟与 P95 延迟。
+<img width="776" height="464" alt="7353fd84bf00cd6de38a7ffba4ac63ca" src="https://github.com/user-attachments/assets/4393e0d2-f75a-4c68-905d-ee0cfc3c3ff9" />
 - 测试结果：
 
 | 指标 | 数值 |
