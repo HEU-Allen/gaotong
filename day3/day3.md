@@ -82,7 +82,7 @@
 | 问题 | 原因 | 解决方案 |
 |------|------|----------|
 | `platform_compare.py` 中文乱码 | Matplotlib 默认无中文字体，Mac 系统中文渲染失败 | 在代码开头配置 `plt.rcParams['font.sans-serif'] = ['PingFang SC', 'Heiti SC']` 并关闭 Unicode 负号 |
-| RKNN 模拟器不可用 | RKNN Toolkit2 2.3.0 移除 simulator 平台配置 | 改用真机部署验证；可以用 RK3588 板子直接烧录测试 |
+| RKNN 模拟器不可用 | RKNN Toolkit2 2.3.0 移除 simulator 平台配置 | 如有RKNN可改用真机部署验证；可以用 RK3588 板子直接烧录测试 |
 | Colab Python 3.12 冲突 | RKNN 官方 wheel 未适配 Python 3.12 | Miniconda 创建 Python 3.9 环境，完全隔离依赖 |
 
 ---
