@@ -27,6 +27,8 @@
 - 视频源：MacBook FaceTime 摄像头，1920×1080 @ 30 FPS。
 - 运行时长：37.7 秒。
 - 结果：
+<img width="1132" height="598" alt="a5438489ca55849025ebb69303e071dd" src="https://github.com/user-attachments/assets/e446b79b-ec24-4e58-a4a6-6b1b15773d41" />
+
 
 | 指标 | 数值 |
 |------|------|
@@ -67,6 +69,10 @@
 - 视频源：MacBook FaceTime 摄像头，1920×1080。
 - 运行时长：122.5 秒。
 - 结果：
+<img width="1130" height="470" alt="bf5e207b44aed6c2df10540ca900a9ce" src="https://github.com/user-attachments/assets/b1709693-6e55-4de4-9375-54da033b2d86" />
+
+<img width="2936" height="1660" alt="be9a5cd9090747f2501eba582c935f34" src="https://github.com/user-attachments/assets/94e44e31-01fe-44da-83ca-3dc43a6eb94a" />
+
 
 | 指标 | 数值 |
 |------|------|
