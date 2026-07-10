@@ -1,0 +1,172 @@
+{
+  "summary": {
+    "avg_fps": 19.362585123455588,
+    "avg_latency_ms": 51.667232499999926,
+    "p95_latency_ms": 53.77868159999974,
+    "avg_cpu_percent": 52.68599999999999,
+    "avg_mem_percent": 79.32099999999997,
+    "runtime_s": 10.652055978775024
+  },
+  "logs_last_20": [
+    {
+      "frame": 181,
+      "latency_ms": 50.64,
+      "infer_ms": 49.53,
+      "fps": 19.75,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 182,
+      "latency_ms": 50.45,
+      "infer_ms": 49.31,
+      "fps": 19.82,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 183,
+      "latency_ms": 50.83,
+      "infer_ms": 49.76,
+      "fps": 19.67,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 184,
+      "latency_ms": 51.74,
+      "infer_ms": 50.81,
+      "fps": 19.33,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 185,
+      "latency_ms": 50.64,
+      "infer_ms": 49.55,
+      "fps": 19.75,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 186,
+      "latency_ms": 50.25,
+      "infer_ms": 49.14,
+      "fps": 19.9,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 187,
+      "latency_ms": 51.6,
+      "infer_ms": 50.46,
+      "fps": 19.38,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 188,
+      "latency_ms": 53.4,
+      "infer_ms": 52.31,
+      "fps": 18.73,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 189,
+      "latency_ms": 51.5,
+      "infer_ms": 50.4,
+      "fps": 19.42,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 190,
+      "latency_ms": 51.33,
+      "infer_ms": 50.22,
+      "fps": 19.48,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 191,
+      "latency_ms": 50.42,
+      "infer_ms": 49.33,
+      "fps": 19.83,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 192,
+      "latency_ms": 50.98,
+      "infer_ms": 50.03,
+      "fps": 19.61,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:02"
+    },
+    {
+      "frame": 193,
+      "latency_ms": 51.41,
+      "infer_ms": 50.33,
+      "fps": 19.45,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 194,
+      "latency_ms": 51.12,
+      "infer_ms": 50.03,
+      "fps": 19.56,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 195,
+      "latency_ms": 51.24,
+      "infer_ms": 50.14,
+      "fps": 19.52,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 196,
+      "latency_ms": 51.41,
+      "infer_ms": 50.35,
+      "fps": 19.45,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 197,
+      "latency_ms": 51.36,
+      "infer_ms": 50.24,
+      "fps": 19.47,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 198,
+      "latency_ms": 51.55,
+      "infer_ms": 50.36,
+      "fps": 19.4,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 199,
+      "latency_ms": 49.7,
+      "infer_ms": 48.58,
+      "fps": 20.12,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    },
+    {
+      "frame": 200,
+      "latency_ms": 51.25,
+      "infer_ms": 50.11,
+      "fps": 19.51,
+      "n_det": 0,
+      "time": "2026-07-09T23:53:03"
+    }
+  ]
+}

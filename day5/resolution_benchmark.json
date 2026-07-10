@@ -1,0 +1,29 @@
+[
+  {
+    "input_resolution": "320x320",
+    "frames": 100,
+    "total_time_s": 5.28,
+    "avg_latency_ms": 52.675,
+    "avg_infer_ms": 50.599,
+    "p95_latency_ms": 55.003,
+    "avg_fps": 18.995
+  },
+  {
+    "input_resolution": "416x416",
+    "frames": 100,
+    "total_time_s": 5.283,
+    "avg_latency_ms": 52.699,
+    "avg_infer_ms": 50.649,
+    "p95_latency_ms": 54.895,
+    "avg_fps": 18.986
+  },
+  {
+    "input_resolution": "640x640",
+    "frames": 100,
+    "total_time_s": 5.154,
+    "avg_latency_ms": 51.385,
+    "avg_infer_ms": 50.208,
+    "p95_latency_ms": 53.885,
+    "avg_fps": 19.479
+  }
+]
