@@ -36,6 +36,8 @@ perf_monitor.png
 ```
 
 基础版测试结果如下：
+<img width="498" height="376" alt="image" src="https://github.com/user-attachments/assets/99ee9aae-f969-4f3a-bb6c-25598ed70671" />
+
 
 | 指标 | 结果 |
 |------|------|
@@ -92,6 +94,8 @@ YOLOv10-N ONNX 推理
 摄像头实时检测系统运行约 60 秒，处理了约 591 帧。
 
 实验结果如下：
+<img width="742" height="504" alt="image" src="https://github.com/user-attachments/assets/aeec43e5-adff-4f49-a02f-ec309558e38a" />
+
 
 | 指标 | 结果 |
 |------|------|
@@ -128,6 +132,9 @@ YOLOv10-N ONNX 推理
 perf_monitor.png
 camera_perf_monitor.png
 ```
+<img width="1800" height="1200" alt="perf_monitor" src="https://github.com/user-attachments/assets/87d8917d-a963-4c07-94d3-0699701784cb" />
+<img width="1800" height="1200" alt="camera_perf_monitor" src="https://github.com/user-attachments/assets/5182406e-5fff-4a13-9612-acb5d2612007" />
+
 
 性能曲线包括 FPS、延迟、CPU 占用率和内存占用率，方便后续分析系统运行状态。
 
@@ -147,6 +154,8 @@ camera_perf_monitor.png
 | 推理后端 | ONNX Runtime CPU |
 
 cProfile 基础结果如下：
+<img width="369" height="239" alt="image" src="https://github.com/user-attachments/assets/ea6d14e9-8711-4696-af3d-29c00650c755" />
+
 
 | 指标 | 结果 |
 |------|------|
@@ -155,6 +164,7 @@ cProfile 基础结果如下：
 | 平均 FPS | 19.60 |
 
 主要函数耗时如下：
+<img width="788" height="536" alt="image" src="https://github.com/user-attachments/assets/597cb9cc-26db-421d-9c72-58f0ffbee2e0" />
 
 | 函数 | 累计耗时 | 说明 |
 |------|------:|------|
@@ -198,6 +208,7 @@ tensor = np.transpose(tensor, (2, 0, 1))[np.newaxis, :]
 需要说明的是，当前 `yolov10n.onnx` 模型输入尺寸固定为 640×640。因此，本次实验测试的是“原始输入画面分辨率”变化对系统性能的影响，而不是模型输入尺寸真正变为 320 或 416。三种输入画面最终都会经过 Letterbox 预处理后送入 640×640 的 ONNX 模型。
 
 测试结果如下：
+<img width="538" height="336" alt="image" src="https://github.com/user-attachments/assets/2a39a485-f8cc-4eae-9c42-53bd175104df" />
 
 | 输入画面分辨率 | 平均延迟 | 推理耗时 | P95 延迟 | 平均 FPS |
 |------|------:|------:|------:|------:|
