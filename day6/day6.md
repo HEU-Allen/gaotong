@@ -114,14 +114,10 @@ typedef struct
 controlOutput = 2 * (setpoint - sensorValue)
 ```
 
-目标值固定为 50。运行结果示例：
+目标值固定为 50。运行结果如下：
 
-```text
-sensor=7 setpoint=50 output=100
-sensor=0 setpoint=50 output=-88
-sensor=94 setpoint=50 output=-74
-sensor=87 setpoint=50 output=-60
-```
+<img width="1118" height="510" alt="fc4a766567d8b4b4fdbd7bfc0eede98a" src="https://github.com/user-attachments/assets/e78d6e82-5ee1-4ae5-b382-855564d0f0ea" />
+
 
 监控值与控制输出偶尔相差一次采样周期：高优先级控制任务可能先按旧传感器值完成计算，随后传感器任务才更新共享状态。这是任务周期、优先级和调度顺序带来的正常现象。
 
