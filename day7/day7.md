@@ -49,6 +49,9 @@ G(s) = K / (tau * s + 1)
 
 生成图像：
 
+<img width="1800" height="1200" alt="pid_comparison" src="https://github.com/user-attachments/assets/66c3c872-c7ad-490e-abda-9c8b5c51cbf2" />
+
+
 ```text
 pid_comparison.png
 ```
@@ -119,6 +122,9 @@ Tu = 0.075 s
 
 生成图像：
 
+<img width="1800" height="1200" alt="zn_p_sweep" src="https://github.com/user-attachments/assets/f8efe692-151a-423a-855f-94df732f7ab5" />
+
+
 ```text
 zn_p_sweep.png
 ```
@@ -150,6 +156,9 @@ overshoot = 73.96%
 ```
 
 生成图像：
+
+<img width="1350" height="750" alt="zn_pid_response" src="https://github.com/user-attachments/assets/6be4308c-88e3-455b-88ee-abcf826079a2" />
+
 
 ```text
 zn_pid_response.png
@@ -193,6 +202,9 @@ torque = 0.1 * iq
 ## 七、控制算法对比结果
 
 生成图像：
+
+<img width="1500" height="1200" alt="foc_vs_pid" src="https://github.com/user-attachments/assets/ccd15103-a353-4eb0-a0b8-5bb3e1b75fa4" />
+
 
 ```text
 foc_vs_pid.png
