@@ -53,6 +53,9 @@ uxTaskCount = uxTaskGetSystemState( xTaskStatus, DAY8_MAX_TASKS, NULL );
 
 QEMU 运行结果：
 
+<img width="1106" height="1282" alt="5eb6ede589f5cc7aa27e39e5783b8a88" src="https://github.com/user-attachments/assets/8ffd6e81-a2eb-42ed-9ff3-39bd91e10566" />
+
+
 ```text
 heap_free=97488 heap_min=97488 alloc=12 free=0
 task=Mem priority=1 stack_free_words=132
@@ -187,6 +190,8 @@ U_bound = n * ( 2^(1/n) - 1 )
 ```text
 day8_realtime.png
 ```
+<img width="1650" height="1050" alt="day8_realtime" src="https://github.com/user-attachments/assets/6bda814a-9a3e-459c-b449-0af3ad2b643e" />
+
 
 图的上半部分显示：
 
