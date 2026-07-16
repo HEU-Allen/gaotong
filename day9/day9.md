@@ -177,8 +177,10 @@ BMP180 initialization successful.
 
 初始设置为约 25.3 摄氏度、101320 Pa。实测串口输出如下：
 
-![90e5a683604209f71af37a5058d34a0e](assets/90e5a683604209f71af37a5058d34a0e.png)
+<img width="2940" height="1674" alt="a3c39d0010462b7f022d64eb5f906156" src="https://github.com/user-attachments/assets/dd9181b6-15cd-4525-b005-d07aab79c014" />
 
+wokwi工程链接如下：
+https://wokwi.com/projects/469703076480586753
 
 ```text
 Temperature: -4.1 C, Pressure: 977.5 hPa
