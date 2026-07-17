@@ -117,6 +117,12 @@ Kp = 2.0, Ki = 0.5, Kd = 0.1
 
 在保持 `Kp = 2.0`、`Kd = 0.005` 的条件下，对积分增益进行对比：
 
+<img width="1650" height="1350" alt="a97c426632a32fca9a4102a72a45c0d6" src="https://github.com/user-attachments/assets/3757f516-6050-4e70-8803-74b2d8409932" />
+
+<img width="1650" height="1350" alt="d0bae110022e5aeb9760f65d44b1eca7" src="https://github.com/user-attachments/assets/df6ee105-9cc9-476d-a1bf-3f431518b17c" />
+
+
+
 | 组别 | Kp | Ki | Kd | 最终位置 | 末段平均误差 | 第二次阶跃超调 |
 |------|---:|---:|---:|---:|---:|---:|
 | 稳定基线 | 2.0 | 0.8 | 0.005 | 1.7663 rad | 0.2648 rad | 0.00% |
