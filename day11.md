@@ -133,6 +133,9 @@ SnakeViz 的 Icicle 图中，矩形宽度代表函数占用的时间。
 <img width="2270" height="600" alt="5997b3a29908701caeb7baf054e58c11" src="https://github.com/user-attachments/assets/66837b56-f171-48ad-8fe9-b77608fb5d82" />
 
 
+<img width="2284" height="580" alt="23a8b843ec6008429e92e91efd378236" src="https://github.com/user-attachments/assets/3ca65613-9fdb-40de-94e1-0596c5f15469" />
+
+
 ### 1. 基线版本
 
 根节点为 `moving_average_slow`，总耗时约 `0.0364 s`。其下 `builtins.sum` 占约 `0.0171 s`，是图中最明显的子块。这证明重复窗口求和是性能热点。
