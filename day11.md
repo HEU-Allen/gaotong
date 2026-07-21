@@ -87,6 +87,9 @@ snakeviz day11_fast.prof
 
 本机实际运行结果如下：
 
+<img width="627" height="788" alt="image" src="https://github.com/user-attachments/assets/a477c94b-8e20-47d6-9c7b-a4b0bda1815b" />
+
+
 | 版本 | 函数调用次数 | 主函数累计耗时 | 关键热点 |
 |------|------------:|--------------:|----------|
 | 基线版本 | 159,845 | 0.038 s | `sum()` 调用 79,921 次 |
@@ -126,6 +129,9 @@ builtins.sum         ncalls: 1
 ## 七、SnakeViz 火焰图分析
 
 SnakeViz 的 Icicle 图中，矩形宽度代表函数占用的时间。
+
+<img width="2270" height="600" alt="5997b3a29908701caeb7baf054e58c11" src="https://github.com/user-attachments/assets/66837b56-f171-48ad-8fe9-b77608fb5d82" />
+
 
 ### 1. 基线版本
 
