@@ -88,6 +88,9 @@ for (; i <= n - 4; i += 4) {
 
 实际运行结果：
 
+<img width="1220" height="556" alt="0ba8324656d6f2558cf733835d921b26" src="https://github.com/user-attachments/assets/81e3fae3-7271-4baa-941e-66a8d72ba377" />
+
+
 ```text
 Scalar dot: 168.98 ms
 NEON dot  : 62.44 ms
