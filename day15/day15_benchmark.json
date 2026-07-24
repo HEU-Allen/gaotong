@@ -1,0 +1,21 @@
+{
+  "frames": 80,
+  "workers": 4,
+  "warmup_runs": 5,
+  "baseline_sequential": {
+    "mean_ms": 1.6693870249999467,
+    "p95_ms": 1.7672318999996328,
+    "max_ms": 1.8526669999996415
+  },
+  "optimized_worker_task": {
+    "mean_ms": 1.5346911375000216,
+    "p95_ms": 1.6529976000006386,
+    "max_ms": 1.7552090000005904
+  },
+  "baseline_total_ms": 133.55096199999565,
+  "optimized_parallel_total_ms": 31.57554199999968,
+  "parallel_throughput_equivalent_ms_per_frame": 0.394694274999996,
+  "throughput_speedup": 4.229569899385956,
+  "correctness_check": "pass",
+  "note": "Synthetic detector benchmark; no trained YOLO ONNX model is bundled."
+}
