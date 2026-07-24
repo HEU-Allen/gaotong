@@ -167,7 +167,8 @@ Correctness check: PASS
 
 每次运行脚本都会自动重新生成文件，因此图中的具体数值会因 CPU 负载和操作系统调度产生小幅波动。
 
-![Day 15 延迟与总体吞吐量对比图](day15_benchmark.png)
+<img width="1920" height="800" alt="day15_benchmark" src="https://github.com/user-attachments/assets/fb9ce3f7-cfcd-40fa-8af3-bc637ba03adb" />
+
 
 | 文件 | 用途 |
 |------|------|
