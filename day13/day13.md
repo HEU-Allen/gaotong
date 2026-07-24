@@ -80,7 +80,6 @@ open day13_course_latency.png
 
 本次运行 1000 次，结果如下：
 
-![图 1 课程对齐版函数追踪终端输出](assets/day13_course_terminal.png)
 
 | 函数 | 调用次数 | 平均延迟 | P95 | 最大延迟 | 判断 |
 |------|---------:|---------:|----:|---------:|------|
@@ -88,7 +87,8 @@ open day13_course_latency.png
 | `kalman_update` | 1000 | 13.0 us | 18.1 us | 853.9 us | 平均很快，存在偶发尖峰 |
 | `pid_compute` | 1000 | 4.5 us | 6.6 us | 20.2 us | 非瓶颈 |
 
-![图 2 课程对齐版：YOLO 预处理、PID 与卡尔曼滤波的延迟分布和时间线](day13_course_latency.png)
+<img width="1800" height="1200" alt="day13_course_latency" src="https://github.com/user-attachments/assets/f47cb900-b4ab-4913-b8d7-b8c35d5c7c71" />
+
 
 延迟时间线显示，YOLO 预处理的绿色曲线远高于 PID 和卡尔曼滤波。原因是预处理需要处理约 `640 × 640 × 3` 的图像数据，并且原始实现每帧都会创建新的大尺寸浮点数组。
 
@@ -160,7 +160,8 @@ open day13_preprocess_optimization.png
 902.3 / 650.5 = 1.39x
 ```
 
-![图 3 预处理内存分配优化：延迟分布与平均延迟对比](day13_preprocess_optimization.png)
+<img width="1800" height="675" alt="day13_preprocess_optimization" src="https://github.com/user-attachments/assets/ea56a4fb-f293-4e7e-8d41-4bc95cf18ee5" />
+
 
 优化不仅让平均延迟降低约 28%，还显著减小了长尾：最大延迟从约 `3.18 ms` 降到约 `1.09 ms`。这对实时任务更重要，因为长尾延迟更容易造成周期任务抖动或错过截止时间。
 
@@ -183,9 +184,8 @@ open day13_preprocess_optimization.png
 
 在课程对齐实验之前，还完成了一个通用的“传感器采集 - 预处理 - 推理 - 后处理”函数追踪练习，用于先验证追踪器、直方图与时间线输出是否正常。该部分是辅助验证，不替代第四节中的课程对齐实验。
 
-![图 4 通用流水线函数追踪终端输出](assets/day13_generic_terminal.png)
+<img width="1800" height="1200" alt="day13_latency" src="https://github.com/user-attachments/assets/655eb594-7549-462f-a564-648cfb00aa8e" />
 
-![图 5 通用流水线的延迟分布与时间线](day13_latency.png)
 
 该辅助实验中，`inference` 的平均延迟约 1469.6 us，为通用流水线的主要耗时阶段；这与课程对齐实验中“图像预处理属于主要瓶颈”的方法论一致：先测量，再确定优化优先级。
 
